@@ -6,3 +6,11 @@ function displayTime() {
 }
 
 displayTime()
+
+if (moment().format("a") === "pm"){
+    var time = moment().format("h") + 12
+    console.log(time)
+}
+
+var time = moment().format("h")
+console.log(time)
