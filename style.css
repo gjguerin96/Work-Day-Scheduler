@@ -72,13 +72,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.left {
-  border-top: 2px solid #d3d3d3;
-  border-bottom: 2px solid #d3d3d3;
-  text-align: end;
-  padding-top: 15px;
-}
-
 .input {
   width: 100%;
   height: 100%;

@@ -15,33 +15,30 @@ function displayTime() {
     var rightNow = moment().format("dddd MMM Do YY")
     $('#currentDay').text(rightNow)
 }
-
 displayTime()
 
 
 function setColor() {
-    if (parseInt(moment().format("h")) === 8) {
-        eight.addClass("present")
-    }
-    else if (parseInt(moment().format("h")) < 8) {
-        eight.addClass("future")
-    }
-    else {
-        eight.addClass("past")
-    }
+    var currentHour = moment().hours();
+ 
+    $('.row').each(function(){
+        var hour = parseInt($(this).attr('id'))
+        
+        if(currentHour > hour){
+            $(this).children('.input').addClass('past');
+        }
+        else if(currentHour === hour){
+            $(this).children('.input').removeClass('past');
+            $(this).children('.input').addClass('present');
+        }else{
+            $(this).children('.input').removeClass('past');
+            $(this).children('.input').removeClass('present');
+            $(this).children('.input').addClass('future');
+        }
+    })
 }
-
-
 setColor()
 
-// var check = parseInt(moment().format("h"))
-
-// console.log(check + 12)
-// var hours = [eight,nine,ten,eleven,twelve,one,two,three,four,five,six]
-
-// jQuery.each(hours, function(){
-//     this.addClass("present")
-// })
 
 $("#8button").click(function(){
     localStorage.setItem("8AM",eight.val())
