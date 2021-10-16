@@ -11,13 +11,14 @@ var five = $("#5PM")
 var six = $("#6PM")
 var test = $("#test")
 
+// adds current date to the header
 function displayTime() {
     var rightNow = moment().format("dddd MMM Do YY")
     $('#currentDay').text(rightNow)
 }
 displayTime()
 
-
+// changes the color of each time block based on whether it is past, present, or future
 function setColor() {
     var currentHour = moment().hours();
  
@@ -39,7 +40,7 @@ function setColor() {
 }
 setColor()
 
-
+// makes each button save text input to the local storage
 $("#8button").click(function(){
     localStorage.setItem("8AM",eight.val())
 })
@@ -74,7 +75,7 @@ $("#6button").click(function(){
     localStorage.setItem("6PM",six.val())
 })
 
-
+// sets the text input to be whatever is saved in the local storage when the page refreshes
 function getSavedValues () {
     if (localStorage.getItem("8AM") != eight.val()) {
         eight.val(localStorage.getItem("8AM"))
