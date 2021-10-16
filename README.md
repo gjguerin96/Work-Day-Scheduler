@@ -1,18 +1,16 @@
 # Work-Day-Scheduler
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+I built this application to help me schedule my tasks for each day. Between work and school I have many things to do, so having this scheduler helps keep my tasks straight and ensures I don't forget anything. 
+
+In the process of bulding it I learned a lot about using third-party APIs. In particular I relied on bootstrap, jQuery, and moment to build the application. Each of them are potentially very useful once you learn how to use them properly.
+
+Link to deployed application: https://gjguerin96.github.io/Work-Day-Scheduler/
 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+You can enter text into the middle block for each hour to schedule your tasks for the day. Once you click the save button to the right, your text is saved and will remain there even if you refresh the page. The text input areas change color to correspond with the current time to show if they are in the past, present, or future (see screenshot).
+
+  ![screenshot showing 3 hour blocks with different colors for past, present, and future](/images/scheduler-screenshot.png)
     
 ## Credits
 I recieved some assistance and advice from my classmates and my tutor, Vinnie Lopez.
